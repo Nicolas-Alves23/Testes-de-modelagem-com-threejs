@@ -8,6 +8,8 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
+
+
 type GLTFResult = GLTF & {
   nodes: {
     Cube: THREE.Mesh
@@ -23,7 +25,7 @@ type GLTFResult = GLTF & {
     Materiais: THREE.MeshStandardMaterial
     ['Cabelo.001']: THREE.MeshStandardMaterial
   }
-  animations: GLTFAction[]
+
 }
 
 export function Model(props: JSX.IntrinsicElements['group']) {
