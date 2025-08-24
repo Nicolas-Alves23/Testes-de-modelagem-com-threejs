@@ -2,7 +2,6 @@ import * as THREE from 'three'
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
-import { GroupProps } from '@react-three/fiber'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -21,7 +20,7 @@ type GLTFResult = GLTF & {
   }
 }
 
-export function Model(props: GroupProps) {
+export function Model(props: React.ComponentProps<'group'>) {
   const { nodes, materials } = useGLTF('/personagem_menino.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
