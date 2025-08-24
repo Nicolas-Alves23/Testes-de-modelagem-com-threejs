@@ -21,7 +21,9 @@ type GLTFResult = GLTF & {
 }
 
 export function Model(props: React.ComponentProps<'group'>) {
-  const { nodes, materials } = useGLTF('/personagem_menino.glb') as GLTFResult
+  // ⚡ Forçando conversão segura via unknown
+  const { nodes, materials } = useGLTF('/personagem_menino.glb') as unknown as GLTFResult;
+
   return (
     <group {...props} dispose={null}>
       <group position={[0.046, -0.168, 0]} scale={[1.037, 1, 1]}>
