@@ -10,7 +10,7 @@ const MyGLBModel: React.FC = () => {
   const modelRef = useRef<THREE.Group>(null);
 
   // Carregando o modelo GLB tipado
-  const { scene } = useGLTF("/personagem_menino.glb") as GLTF;
+  const { scene } = useGLTF("/personagem_menino.glb");
 
   return <primitive ref={modelRef} object={scene} scale={1} position={[0, 0, 0]} />;
 };
