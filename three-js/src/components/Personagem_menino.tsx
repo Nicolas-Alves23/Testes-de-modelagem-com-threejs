@@ -18,7 +18,7 @@ type GLTFResult = GLTF & {
     Materiais: THREE.MeshStandardMaterial
     ['Cabelo.001']: THREE.MeshStandardMaterial
   }
-
+  animations?: any[]
 }
 
 export function Model(props: React.ComponentProps<'group'>) {
