@@ -18,11 +18,12 @@ type GLTFResult = GLTF & {
     Materiais: THREE.MeshStandardMaterial
     ['Cabelo.001']: THREE.MeshStandardMaterial
   }
+  // Se você não usa animações, pode remover
+  animations?: any[]
 }
 
 export function Model(props: React.ComponentProps<'group'>) {
-  // ⚡ Forçando conversão segura via unknown
-  const { nodes, materials } = useGLTF('/personagem_menino.glb') as unknown as GLTFResult;
+  const { nodes, materials } = useGLTF('/personagem_menino.glb') as unknown as GLTFResult
 
   return (
     <group {...props} dispose={null}>
